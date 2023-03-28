@@ -1,0 +1,234 @@
+.navbar-menu {
+  height: 14rem;
+}
+
+.navbar-portada {
+  height: 9rem;
+  background: url(https://img.freepik.com/foto-gratis/alto-angulo-tablas-cortar-nuggets-pollo-frito-salsas_23-2148646589.jpg?w=996&t=st=1675955015~exp=1675955615~hmac=ed2da8f6092ebbab3044b3723d340e3e9e54ee5a69404d4cf243154ab4034530);
+}
+
+.navbar-logo {
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  border: 1px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 60px;
+}
+
+.navbar-horarios {
+  height: 2rem;
+  width: 7rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  background-color: rgba(128, 128, 128, 0.541);
+}
+
+.button-horarios {
+  height: 2rem;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.navbar-titulo-wp {
+  height: 3rem;
+  display: flex;
+}
+
+.navbar-titulo {
+  height: 3rem;
+  margin-left: 12rem;
+  display: flex;
+  font-size: 28px;
+}
+
+.navbar-wp {
+  height: 3rem;
+  width: 3rem;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.button-wp {
+  height: 3rem;
+  width: 3rem;
+  font-size: 23px;
+}
+
+.navbar-navegacion {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-navegation {
+  margin-left: 2rem;
+}
+
+.button-home {
+  height: 3rem;
+  font-size: 18px;
+}
+
+.right-navegation {
+  margin-right: 2rem;
+}
+
+.button-reservas,
+.button-ingresar,
+.button-registrarse {
+  height: 3rem;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-logo-titulo {
+  display: flex;
+}
+
+.modal-logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.modal-titulo {
+  height: 3rem;
+  padding-top: 7px;
+  display: flex;
+  margin-left: 0.8rem;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal-horarios,
+.modal-direccion,
+.modal-servicio {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.horarios-dias {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  font-style: italic;
+}
+
+.direccion {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  font-style: italic;
+}
+
+.servicio {
+  display: flex;
+  justify-content: space-evenly;
+  height: 2rem;
+  font-style: italic;
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+
+  .navbar-menu {
+    height: 10rem;
+  }
+
+  .navbar-portada {
+    height: 6rem;
+  }
+
+  .navbar-logo {
+    height: 6rem;
+    width: 6rem;
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+  }
+
+  .navbar-horarios {
+    height: 1.5rem;
+    width: 5.5rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    background-color: rgba(128, 128, 128, 0.541);
+  }
+
+  .button-horarios {
+    height: 1.5rem;
+    width: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 0px;
+    padding-top: 15px;
+
+  }
+
+  .navbar-titulo-wp {
+    height: 2rem;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-titulo {
+    height: 2rem;
+    margin-left: 8rem;
+    display: flex;
+    font-size: 18.6px;
+  }
+
+  .navbar-wp {
+    height: 2rem;
+    width: 2rem;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .button-wp {
+    height: 2rem;
+    width: 2rem;
+    font-size: 15.3px;
+    padding: 0px;
+    padding-top: 4px;
+  }
+
+  .navbar-navegacion {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left-navegation {
+    margin-left: 1rem;
+  }
+
+  .button-home {
+    height: 2rem;
+    font-size: 12px;
+
+  }
+
+  .right-navegation {
+    margin-right: 1rem;
+  }
+
+  .button-reservas,
+  .button-ingresar,
+  .button-registrarse {
+    height: 2rem;
+    font-size: 12px;
+  }
+}

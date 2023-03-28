@@ -1,0 +1,23 @@
+:root {
+  --bg-opacidad: rgba(245, 245, 245, 0.45);
+  --bg-opacidad-contacto: rgba(245, 245, 245, 0.75);
+}
+
+.bg_seccion_dos{
+  background-image: url('https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-opacidad{
+  background-color: var(--bg-opacidad);
+}
+
+.bg-opacidad-contacto{
+  background-color: var(--bg-opacidad-contacto);
+}
+
+.w-700{
+  font-weight: 700;
+}

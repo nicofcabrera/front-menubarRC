@@ -1,0 +1,22 @@
+.text-justify{
+  text-align: justify;
+}
+
+.img{
+  height:200px;
+  width: 200px;
+  border-radius: 100px;
+  transition: all .4s linear;
+}
+
+.img:hover,.img:focus{
+  transform: scale(1.2);
+  box-shadow: 1px 1px 4px rgb(82, 81, 81);
+}
+
+
+@media screen and (min-width:768px){
+  .container_texto_sobrenos{
+    width: 70ch;
+  }
+}
