@@ -7,7 +7,6 @@ const Tabla = () => {
 
   const [datos, setData] = useState([]);
 
-
   const getDatos = async () => {
     const { data } = await axios.get('http://localhost:8000/get-users')
     setData(data);
@@ -15,8 +14,7 @@ const Tabla = () => {
 
   useEffect(() => {
     getDatos()
-  },[])
-
+  }, [])
 
   return (
     <>
@@ -33,7 +31,7 @@ const Tabla = () => {
         </thead>
         <tbody>
           {
-            datos.map(e => <FilaTabla key1={e.email} nombre={e.nombre} email={e.email} estado={e.estado} id={e._id} rol={e.rol} pw={e.password} />)
+            datos.map(e => <FilaTabla key1={e.email} nombre={e.nombre} email={e.email} estado2={e.estado} id2={e._id} rol={e.rol} pw={e.password} />)
           }
         </tbody>
     </table>
