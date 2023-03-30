@@ -1,5 +1,6 @@
 // import axios from 'axios'
 import React from 'react'
+import ContenidoMenu from '../ContenidoMenu/ContenidoMenu'
 import TablaUsers from '../TablaUsers/TablaUsers'
 
 const PruebasBackend = () => {
@@ -13,6 +14,7 @@ const PruebasBackend = () => {
         <TablaUsers />
         <h2>Pedidos</h2>
         <h2>Menu</h2>
+        <ContenidoMenu />
       </div>
 
     </>
