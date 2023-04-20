@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import CardsMenu from '../CardsMenu/CardsMenu';
-import ModalMenu from '../ModalMenu/ModalMenu';
 
 const ContenidoMenu = () => {
 
@@ -25,11 +24,7 @@ const ContenidoMenu = () => {
           {
             datos.map(res => <CardsMenu nombre={res.nombre} estado={res.estado} precio={res.precio} detalle={res.detalle} categoria={res.categoria} img={res.img} id={res._id} /> )
           }  
-      </div>
-      {
-        datos.map(res => <ModalMenu nombre={res.nombre} />)
-      }
-     
+      </div>  
     </section>
   )
 }
