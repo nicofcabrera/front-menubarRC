@@ -14,6 +14,8 @@ const PruebasBackend = () => {
         <TablaUsers />
         <h2>Pedidos</h2>
         <h2>Menu</h2>
+        {/* ver en armar un componente para el poste */}
+        <button className='btn btn-info rounded-circle'><i class="bi bi-plus-circle"></i></button>
         <ContenidoMenu />
       </div>
 
