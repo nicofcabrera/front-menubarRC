@@ -2,6 +2,7 @@
 import React from 'react'
 import ContenidoMenu from '../ContenidoMenu/ContenidoMenu'
 import TablaUsers from '../TablaUsers/TablaUsers'
+import ButtonPostMenu from '../ButtonPostMenu/ButtonPostMenu'
 
 const PruebasBackend = () => {
   
@@ -13,9 +14,10 @@ const PruebasBackend = () => {
         <h2>Usuarios</h2>
         <TablaUsers />
         <h2>Pedidos</h2>
+        
         <h2>Menu</h2>
         {/* ver en armar un componente para el poste */}
-        <button className='btn btn-info rounded-circle'><i class="bi bi-plus-circle"></i></button>
+        <ButtonPostMenu/>
         <ContenidoMenu />
       </div>
 
