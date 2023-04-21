@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import FilaPedidos from '../FilaPedidos/FilaPedidos';
 
 const TablaPedidos = () => {
   const [pedido, setPedido] = useState([]);
-
 
   const getPedidos = async () => {
     const { data } = await axios.get('http://localhost:8000/get-pedido')
@@ -28,15 +28,7 @@ const TablaPedidos = () => {
         </thead>
         <tbody>
         {
-          pedido.map(result => (
-            <tr>
-              <td>{result._id}</td>
-              <td>{result.email}</td>
-              <td>27/03/2023</td>
-              <td></td>
-              <td>Pendiente</td>
-            </tr>
-          ))  
+          pedido.map(result => <FilaPedidos id={result._id} usuario1={result.usuario} fecha1={result.fecha} menu1={result.menu} estado1={result.estado} />)  
         }
         </tbody>
     </table>

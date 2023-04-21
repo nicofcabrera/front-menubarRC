@@ -3,6 +3,7 @@ import React from 'react'
 import ContenidoMenu from '../ContenidoMenu/ContenidoMenu'
 import TablaUsers from '../TablaUsers/TablaUsers'
 import ButtonPostMenu from '../ButtonPostMenu/ButtonPostMenu'
+import TablaPedidos from '../TablaPedidos/TablaPedidos'
 
 const PruebasBackend = () => {
   
@@ -14,7 +15,7 @@ const PruebasBackend = () => {
         <h2>Usuarios</h2>
         <TablaUsers />
         <h2>Pedidos</h2>
-        
+        <TablaPedidos />
         <h2>Menu</h2>
         {/* ver en armar un componente para el poste */}
         <ButtonPostMenu/>
