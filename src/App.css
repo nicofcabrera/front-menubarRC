@@ -23,6 +23,20 @@ body{
   background-image: linear-gradient(to right top, #000000, #1d1d1d, #333333, #4b4b4b, #646464);
 }
 
+.card_menu_front{
+  width: 18rem;
+}
+
+.card_menu_front img{
+  height: calc(18rem/1.2);
+  /* object-fit: contain; */
+  /* object-position: top; */
+}
+
+.card_menu_front .bebidas{
+ object-fit: contain;
+}
+
 
 
 @media screen and (min-width:768px) {
