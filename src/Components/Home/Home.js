@@ -11,8 +11,8 @@ import Footer from '../Footer/Footer';
 const Home = () => {
   return (
     <>
-      <NavbarLanding title='' linkUno={'Como Funciona'} linkDos={'Planes'} linkTres={'Nuestros Clientes'} linkCuatro={'Sobre Nosotros'} linkCinco={'Contacto'} />
-      <main className='pb-5'>
+      <NavbarLanding title='Bar Ricolino' linkUno={'Sanguches'} linkDos={'Burgers'} linkTres={'Bebidas'} linkCuatro={'Ingresar'} linkCinco={'Registrarse'} />
+      <main className='py-5'>
         <Sanguches title={'Sanguches'} />
         <Burgers title={'Burgers'} />
         <Bebidas title={'Bebidas'} />

@@ -18,7 +18,7 @@ const Bebidas = ({title}) => {
 
 
   return (
-    <section className='container'>
+    <section className='container' id={title}>
       <h2>{title}</h2>
       <div className="row justify-content-center justify-content-md-evenly gap-5 gap-md-4">
       {

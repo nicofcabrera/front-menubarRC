@@ -19,7 +19,7 @@ const Sanguches = ({title}) => {
 
 
   return (
-    <section className='container mb-5'>
+    <section className='container mb-5' id={title}>
       <h2 className='mb-2'>{title}</h2>
       <div className="row justify-content-center justify-content-md-evenly gap-5 gap-md-4">
       {
