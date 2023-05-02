@@ -7,7 +7,7 @@ import TablaPedidos from '../TablaPedidos/TablaPedidos'
 
 const PruebasBackend = () => {
   
-
+  
   return (
     <>  
       <h1 className='text-center'>Panel de control</h1>

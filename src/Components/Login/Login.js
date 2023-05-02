@@ -1,25 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
+import NavbarLanding from '../NavbarLanding/NavbarLanding'
+import Footer from '../Footer/Footer'
+import axios from 'axios'
 
 const Login = () => {
+
+  const [login, setLogin] = useState({})
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setLogin({
+      ...login,
+      [name]:value
+    })
+  }
+
+  const onLogin = async () => {
+    console.log(login)
+    
+    const {data} = await axios.post('http://localhost:8000/userlogin', login);
+    console.log(data)
+    alert(data.ingreso ? 'usuario coincide!' : 'User incorrecto')
+    // window.location = 'http://localhost:3000/login'
+    
+  }
   return (
-    <div>
-      <form>
-        <div class="mb-3 justify-content-center align-items-center">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1"/>
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+    <>
+     <NavbarLanding title='Bar RC' linkUno={'Sanguches'} linkDos={'Burgers'} linkTres={'Bebidas'} linkCuatro={'Ingresar'} linkCinco={'Registrarse'} />
+    <main>
+      <div className="container">
+        <h1>Ingresar</h1>
+        <form className='w-50 mx-auto mt-5'>
+          <div className="mb-3 justify-content-center align-items-center">
+            <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
+            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Ingresa tu email' name='email' onChange={handleChange}/>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">Contraseña</label>
+            <input type="password" className="form-control" id="exampleInputPassword1" name='password' onChange={handleChange}/>
+          </div>
+          <button type="button" className="btn btn-dark w-50 d-block mx-auto mx-md-0 ms-md-auto" onClick={onLogin}>Ingresar</button>
+       </form>
+      </div>       
+      </main>
+      <Footer styles={'position-absolute bottom-0 w-100'} />
+    </>
   )
 }
 

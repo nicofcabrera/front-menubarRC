@@ -27,10 +27,10 @@ const NavbarLanding = ({title, linkUno, linkDos, linkTres, linkCuatro, linkCinco
             <a className="nav-link link_navegacion"  aria-current="page" href={'#'+linkTres}>{linkTres}</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link link_navegacion" aria-current="page" href={'#'+linkCuatro}>{linkCuatro}</a>
+            <a className="nav-link link_navegacion" aria-current="page" href='/login'>{linkCuatro}</a>
           </li>
           <li className="nav-item">
-            <a className="btn btn-light" aria-current="page" href={'#'+linkCinco}>{linkCinco}</a>
+            <a className="btn btn-light" aria-current="page" href='/registro'>{linkCinco}</a>
           </li>
         </ul>
       </div>
