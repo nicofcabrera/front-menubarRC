@@ -31,6 +31,12 @@ const Home = () => {
         />
         <Burgers
           title={'Burgers'}
+          allProducts={allProducts}
+          setAllProducts={setAllProducts}
+          total={total}
+          setTotal={setTotal}
+          contador={contador}
+          setContador={setContador}
         />
         <Bebidas
           title={'Bebidas'}

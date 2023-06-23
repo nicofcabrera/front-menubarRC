@@ -15,22 +15,27 @@ const Login = () => {
     })
   }
 
-  const onLogin = async () => {
-    console.log(login)
-    
-    const {data} = await axios.post('http://localhost:8000/userlogin', login);
-    console.log(data)
-    alert(data.ingreso ? 'usuario coincide!' : 'User incorrecto')
-    // window.location = 'http://localhost:3000/login'
-    
+  const onLogin = async (e) => {
+    e.preventDefault();
+    // console.log(login);
+    const {data} = await axios.post('http://localhost:8000/userlogin', login); 
+
+    if (await data.result.email === login.email) {
+      console.log('OK');
+    } else {
+      console.log('NA');
+    }
+
   }
+
+
   return (
     <>
      <NavbarLanding title='Bar RC' linkUno={'Sanguches'} linkDos={'Burgers'} linkTres={'Bebidas'} linkCuatro={'Ingresar'} linkCinco={'Registrarse'} />
     <main>
       <div className="container">
         <h1>Ingresar</h1>
-        <form className='w-50 mx-auto mt-5'>
+        <form onSubmit={onLogin} className='w-50 mx-auto mt-5'>
           <div className="mb-3 justify-content-center align-items-center">
             <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Ingresa tu email' name='email' onChange={handleChange}/>
@@ -39,7 +44,7 @@ const Login = () => {
             <label htmlFor="exampleInputPassword1" className="form-label">Contraseña</label>
             <input type="password" className="form-control" id="exampleInputPassword1" name='password' onChange={handleChange}/>
           </div>
-          <button type="button" className="btn btn-dark w-50 d-block mx-auto mx-md-0 ms-md-auto" onClick={onLogin}>Ingresar</button>
+          <button type="submit" className="btn btn-dark w-50 d-block mx-auto mx-md-0 ms-md-auto">Ingresar</button>
        </form>
       </div>       
       </main>
