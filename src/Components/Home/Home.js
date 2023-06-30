@@ -40,6 +40,12 @@ const Home = () => {
         />
         <Bebidas
           title={'Bebidas'}
+          allProducts={allProducts}
+          setAllProducts={setAllProducts}
+          total={total}
+          setTotal={setTotal}
+          contador={contador}
+          setContador={setContador}
         />
         <CarritoBottom
           allProducts={allProducts}

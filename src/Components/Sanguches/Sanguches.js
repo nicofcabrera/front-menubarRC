@@ -29,9 +29,7 @@ const Sanguches = ({title, allProducts, setAllProducts, total, setTotal, contado
      setContador(contador + product.cantidad)
      setAllProducts([...allProducts,product])
   }
-  console.log(allProducts)
   
-
   useEffect(() => {
     getDatos()
   },[])

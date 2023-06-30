@@ -28,7 +28,6 @@ const Burgers = ({title,allProducts, setAllProducts, total, setTotal, contador, 
      setContador(contador + product.cantidad)
      setAllProducts([...allProducts,product])
   }
-  console.log(allProducts)
 
   useEffect(() => {
     getDatos()
