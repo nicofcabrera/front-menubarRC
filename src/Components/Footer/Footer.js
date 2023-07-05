@@ -3,7 +3,7 @@ import './footer.css';
 
 const Footer = ({styles}) => {
   return (
-    <footer className={styles ? `${styles}`: 'footer'}>
+    <footer className='footer'>
       <div className='footer-menu py-3 bg-dark'>
       <div className='footer-titulo-logo'>
         <div className='footer-titulo text-light'>

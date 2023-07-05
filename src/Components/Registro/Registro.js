@@ -30,7 +30,7 @@ const Registro = () => {
   return (
     <>
      <NavbarLanding title='Bar RC' linkUno={'Sanguches'} linkDos={'Burgers'} linkTres={'Bebidas'} linkCuatro={'Ingresar'} linkCinco={'Registrarse'} />
-    <main>
+    <main className='min-vh-100'>
       <div className="container">
         <h1>Registro</h1>
         <form className='w-50 mx-auto mt-5'>

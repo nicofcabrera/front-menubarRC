@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import TarjetasMenu from '../TarjetasMenu/TarjetasMenu';
+// import TarjetasMenu from '../TarjetasMenu/TarjetasMenu';
 
 const Bebidas = ({title, allProducts, setAllProducts, total, setTotal, contador, setContador}) => {
   const [datos, setData] = useState([]);
