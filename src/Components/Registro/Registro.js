@@ -28,18 +28,18 @@ const Registro = () => {
       <main className='min-vh-100'>
         <div className="container">
           <h1>Registro</h1>
-          <form className='w-50 mx-auto mt-5 needs-validation' onSubmit={handleSubmit(onSubmit)} >
+          <form className='w-50 mx-auto mt-5' onSubmit={handleSubmit(onSubmit)} >
             <div className="mb-3 justify-content-center align-items-center">
               <label htmlFor="lbl-name" className='form-label'>Nombre</label>
-              <input type="text" className={errors.nombre ? "form-control border-danger" : "form-control"} id="lbl-name" placeholder='Ingresa tu nombre' name='nombre' maxLength={'20'} {...register("nombre", {
+              <input type="text" className={errors.nombre ? "form-control border-danger" : "form-control"} id="lbl-name" placeholder='Ingresa tu nombre' name='nombre' maxLength={'25'} required {...register("nombre", {
                 required: "Ingresa tu nombre",
                 minLength: {
                   value: 3,
                   message: 'Minimo 3 caracteres'
                 },
                 maxLength: {
-                  value: 20,
-                  message: 'Maximo 20 caracteres'
+                  value: 25,
+                  message: 'Maximo 25 caracteres'
                 },
                 pattern: {
                   value: patternName,
@@ -50,7 +50,7 @@ const Registro = () => {
             </div>
             <div className="mb-3 justify-content-center align-items-center">
               <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-              <input type="email" className={errors.email ? "form-control border-danger" : "form-control"} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Ingresa tu email' name='email' maxLength={'30'}  {...register("email", {
+              <input type="email" className={errors.email ? "form-control border-danger" : "form-control"} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Ingresa tu email' name='email' maxLength={'30'} required {...register("email", {
                 required: "Ingresa tu email",
                 pattern: {
                   value: patternEmail,
@@ -61,11 +61,15 @@ const Registro = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">Contraseña</label>
-              <input type="password" className={errors.password ? "form-control border-danger" : "form-control"} id="exampleInputPassword1" maxLength={'10'}  name='password' {...register("password", {
+              <input type="password" className={errors.password ? "form-control border-danger" : "form-control"} id="exampleInputPassword1" maxLength={'12'}  name='password' required {...register("password", {
                 required: "Ingresa tu contraseña",
                 minLength: {
                   value: 6,
                   message: 'Minimo 6 caracteres'
+                },
+                maxLength: {
+                  value: 12,
+                  message: 'Maximo 12 caracteres'
                 }
               })} />
               <p className='text-danger small'>{errors.password?.message}</p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './home.css';
 import NavbarLanding from '../../Components/NavbarLanding/NavbarLanding';
 import Sanguches from '../Sanguches/Sanguches';
@@ -10,6 +10,27 @@ import CarritoBottom from '../CarritoBottom/CarritoBottom';
 
   
 const Home = () => {
+
+  
+
+  const ingresoMenu = () => {
+    // const value = window.localStorage.getItem('role')
+    // if (value) {
+    //   return alert('Tenes acceso')
+    // } else {
+    //   return alert('No tenes acceso')
+    //   console.log(res);
+    //   window.location.href = 'http://localhost:3000/login'
+    // }
+  }
+
+   useEffect(() => {
+    ingresoMenu()
+  },[])
+
+  // ingresoMenu()
+
+  // alert('Hola')
 
   const [allProducts, setAllProducts] = useState([])
   const [total, setTotal] = useState(0)
