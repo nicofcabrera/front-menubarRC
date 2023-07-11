@@ -4,6 +4,7 @@ import ContenidoMenu from '../ContenidoMenu/ContenidoMenu'
 import TablaUsers from '../TablaUsers/TablaUsers'
 import ButtonPostMenu from '../ButtonPostMenu/ButtonPostMenu'
 import TablaPedidos from '../TablaPedidos/TablaPedidos'
+import { Link } from 'react-router-dom'
 
 const PruebasBackend = () => {
   
@@ -11,6 +12,7 @@ const PruebasBackend = () => {
   return (
     <>  
       <h1 className='text-center'>Panel de control</h1>
+      <Link to='/menu' className='btn btn-info'>Ver Menu</Link>
       <div className='container'>
         <h2>Usuarios</h2>
         <TablaUsers />

@@ -8,11 +8,13 @@ import Registro from './Components/Registro/Registro';
 import Validate from './Components/Validate/Validate';
 import Inicio from './Components/Inicio/Inicio';
 import { useState } from 'react';
+import ValidatePanel from './Components/ValidatePanel/ValidatePanel';
 
 
 function App() {
 
-  const [user1, setUser1] = useState('')
+  const [user1, setUser1] = useState()
+  console.log(user1);
   
   return (
     <>
@@ -22,10 +24,12 @@ function App() {
           <Route path='login' element={<Login user1={user1} setUser1={setUser1} />} />
           <Route path='registro' element={<Registro />} />
           <Route path='*' element={<ErrorPage />} />
-          <Route path='panel' element={<PruebasBackend/>} />
           <Route element={<Validate permiso={user1} />}>
-            <Route path='menu' element={<Home />} />
+            <Route path='menu' element={<Home />} />           
           </Route>
+          <Route element={<ValidatePanel usuario={user1} />}>
+            <Route path='panel' element={<PruebasBackend/>} />
+         </Route>
         </Routes>
       </BrowserRouter>
     </>

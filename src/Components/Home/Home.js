@@ -6,6 +6,7 @@ import Burgers from '../Burgers/Burgers';
 import Bebidas from '../Bebidas/Bebidas';
 import Footer from '../Footer/Footer';
 import CarritoBottom from '../CarritoBottom/CarritoBottom';
+import { Link } from 'react-router-dom';
 
 
   
@@ -41,6 +42,7 @@ const Home = () => {
     <>
       <NavbarLanding title='Bar RC' linkUno={'Sanguches'} linkDos={'Burgers'} linkTres={'Bebidas'} linkCuatro={'Ingresar'} linkCinco={'Registrarse'} />
       <main className='pt-5 position-relative'>
+        <Link to='/panel' className='btn btn-info'>Panel</Link>
         <Sanguches
           title={'Sanguches'}
           allProducts={allProducts}

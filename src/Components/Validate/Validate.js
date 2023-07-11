@@ -7,6 +7,8 @@ const Validate = ({ permiso, redireccion = '/' }) => {
     return <Navigate to={redireccion} replace />
   }
 
+  
+
   return (
    <Outlet />
   )
