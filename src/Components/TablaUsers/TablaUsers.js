@@ -14,14 +14,13 @@ const TablaUsers = ({ urlBackend }) => {
 
   useEffect(() => {
     getDatos()
-  },[datos])
+  })
 
   return (
     <>
       <table className="table">
         <thead>
           <tr>
-            {/* <th scope="col">ID</th> */}
             <th scope="col">Nombre</th>
             <th scope="col">Email</th>
             <th scope="col">Estado</th>

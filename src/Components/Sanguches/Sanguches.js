@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-// import TarjetasMenu from '../TarjetasMenu/TarjetasMenu';
 
 const Sanguches = ({title, allProducts, setAllProducts, total, setTotal, contador, setContador}) => {
 
@@ -39,9 +38,6 @@ const Sanguches = ({title, allProducts, setAllProducts, total, setTotal, contado
     <section className='container mb-5' id={title}>
       <h2 className='mb-2'>{title}</h2>
       <div className="row justify-content-center justify-content-md-evenly gap-5 gap-md-4">
-      {/* {
-          datos.map(res => <TarjetasMenu categoriaProducto={res.categoria} nombreProducto={res.nombre} descripcionProducto={res.detalle} imgProducto={res.img} precioProducto={res.precio} allPorducts={allPorducts} setAllProducts={setAllProducts} res={res} />)    
-      } */}
         {
           datos.map(product => (
             <article className="card card_menu_front p-0  position-relative" key={product._id}>

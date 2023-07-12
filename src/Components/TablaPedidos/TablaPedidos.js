@@ -12,14 +12,13 @@ const TablaPedidos = () => {
 
   useEffect(() => {
     getPedidos()
-  },[pedido])
+  })
 
 
   return (
     <table className="table">
         <thead>
           <tr>
-            {/* <th scope="col">ID</th> */}
             <th scope="col">Usuario</th>
             <th scope="col">Fecha</th>
             <th scope="col">Menú</th>
