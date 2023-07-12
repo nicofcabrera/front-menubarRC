@@ -13,15 +13,15 @@ const Contacto = () => {
         <form className='mx-auto' onSubmit={'return false;'}>
          <div className='row'>
             <div className='col-12 col-lg-6'>
-              <label for="lbl-nombre" className='form-label w-500'>Nombres *</label>
+              <label htmlFor="lbl-nombre" className='form-label w-500'>Nombres *</label>
               <input type="text" className='form-control mb-3' id='lbl-nombre' name='nombre' required/>
-              <label for="lbl-email" className='form-label w-500'>Email *</label>
+              <label htmlFor="lbl-email" className='form-label w-500'>Email *</label>
               <input type="text" className='form-control mb-3' id='lbl-email' name='email' required/>
-              <label for="lbl-empresa" className='form-label w-500'>Nombre empresa</label>
+              <label htmlFor="lbl-empresa" className='form-label w-500'>Nombre empresa</label>
               <input type="text" className='form-control mb-3' id='lbl-empresa' name='empresa' required/>
             </div>
             <div className='col-12 col-lg-6'>
-              <label for="lbl-mensaje" className='form-label w-500'>Mensaje *</label>
+              <label htmlFor="lbl-mensaje" className='form-label w-500'>Mensaje *</label>
               <textarea name="mensaje" className='form-control' id="lbl-mensaje" cols="30" rows="10" required></textarea>
             </div>
           </div>

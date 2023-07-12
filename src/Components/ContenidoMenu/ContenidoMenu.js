@@ -20,9 +20,13 @@ const ContenidoMenu = () => {
 
   return (
     <section className='container'>
-      <div class="row justify-content-around">
+      <div className="row justify-content-around">
           {
-            datos.map(res => <CardsMenu nombre={res.nombre} estado={res.estado} precio={res.precio} detalle={res.detalle} categoria={res.categoria} img={res.img} id={res._id} /> )
+          datos.map(res =>
+            <div className="card bg-transparent card-style mb-3 mt-3 col-sm-4 col-xs-4 p-0" key={res._id}>
+              <CardsMenu nombre={res.nombre} estado={res.estado} precio={res.precio} detalle={res.detalle} categoria={res.categoria} img={res.img} id={res._id} />
+            </div>
+          )
           }  
       </div>  
     </section>

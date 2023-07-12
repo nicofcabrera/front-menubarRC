@@ -1,4 +1,3 @@
-// import axios from 'axios'
 import React from 'react'
 import ContenidoMenu from '../ContenidoMenu/ContenidoMenu'
 import TablaUsers from '../TablaUsers/TablaUsers'
@@ -6,16 +5,16 @@ import ButtonPostMenu from '../ButtonPostMenu/ButtonPostMenu'
 import TablaPedidos from '../TablaPedidos/TablaPedidos'
 import { Link } from 'react-router-dom'
 
-const PruebasBackend = () => {
+const Panel = ({urlBackend}) => {
   
   
   return (
     <>  
-      <h1 className='text-center'>Panel de control</h1>
+      <h1 className='text-center mt-3'>Panel de control</h1>
       <Link to='/menu' className='btn btn-info'>Ver Menu</Link>
       <div className='container'>
         <h2>Usuarios</h2>
-        <TablaUsers />
+        <TablaUsers urlBackend={urlBackend} />
         <h2>Pedidos</h2>
         <TablaPedidos />
         <h2>Menu</h2>
@@ -28,4 +27,4 @@ const PruebasBackend = () => {
   )
 }
 
-export default PruebasBackend
+export default Panel

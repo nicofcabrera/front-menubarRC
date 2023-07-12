@@ -17,25 +17,19 @@ const FilaPedidos = ({ id, usuario1, fecha1, menu1, estado1 }) => {
   }
 
 
-  return (
-    <tr className='fila_pedidos'>
-      <td>{id}</td>
-      <td>{usuario1}</td>
-      <td>{fecha1}</td>
-      <td>{menu1}</td>
-      <td>{estado1}</td>
-      {/* <td>
-        <button className='bg-warning text-white border border-black rounded-circle button-fila' >
-          <i class="bi bi-slash-circle"></i>
-        </button>
-      </td> */}
-      <td>
-        <button className='btn-pedido bg-success text-white border border-black rounded-circle button-fila' onClick={cambiarEstado}>
-          <i class="bi bi-check"></i>
-        </button>
-      </td>
-    </tr>
-  )
+return (
+  <>
+    <td>{usuario1}</td>
+    <td>{fecha1}</td>
+    <td>{menu1}</td>
+    <td>{estado1}</td>
+    <td>
+      <button className='btn-pedido bg-success text-white border border-black rounded-circle button-fila' onClick={cambiarEstado}>
+        <i className="bi bi-check"></i>
+      </button>
+    </td>
+  </>
+)
 }
 
 export default FilaPedidos

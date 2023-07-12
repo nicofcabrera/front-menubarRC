@@ -1,37 +1,40 @@
 import axios from 'axios'
-import React, {useState, useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import FilaTabla from '../FilaTabla/FilaTabla'
 
 
-const Tabla = () => {
-
+const TablaUsers = ({ urlBackend }) => {
+  
   const [datos, setData] = useState([]);
 
   const getDatos = async () => {
-    const { data } = await axios.get('http://localhost:8000/get-users')
+    const { data } = await axios.get(`${urlBackend}/get-users`)
     setData(data);
   }
 
   useEffect(() => {
     getDatos()
-  }, [])
+  },[datos])
 
   return (
     <>
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            {/* <th scope="col">ID</th> */}
             <th scope="col">Nombre</th>
             <th scope="col">Email</th>
             <th scope="col">Estado</th>
             <th scope="col">Rol</th>
-            <th scope="col">Pw</th>
           </tr>
         </thead>
         <tbody>
           {
-            datos.map(e => <FilaTabla key1={e.email} nombre={e.nombre} email={e.email} estado2={e.estado} id2={e._id} rol={e.rol} pw={e.password} />)
+            datos.map(e =>
+              <tr key={e._id}>
+                <FilaTabla key1={e._id} nombre={e.nombre} email={e.email} estado2={e.estado} id2={e._id} rol={e.rol} urlBackend={urlBackend} />
+              </tr>
+            )
           }
         </tbody>
     </table>
@@ -39,4 +42,4 @@ const Tabla = () => {
   )
 }
 
-export default Tabla
+export default TablaUsers

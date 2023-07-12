@@ -2,19 +2,20 @@ import './App.css';
 import Home from './Components/Home/Home';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
-import PruebasBackend from './Components/PruebasBackend/PruebasBackend';
 import Login from './Components/Login/Login';
 import Registro from './Components/Registro/Registro';
-import Validate from './Components/Validate/Validate';
 import Inicio from './Components/Inicio/Inicio';
 import { useState } from 'react';
+import Validate from './Components/Validate/Validate';
 import ValidatePanel from './Components/ValidatePanel/ValidatePanel';
+import Panel from './Components/Panel/Panel';
+
 
 
 function App() {
 
-  const [user1, setUser1] = useState()
-  console.log(user1);
+  const [user1, setUser1] = useState();
+  const URL = 'http://localhost:8000'
   
   return (
     <>
@@ -28,7 +29,7 @@ function App() {
             <Route path='menu' element={<Home />} />           
           </Route>
           <Route element={<ValidatePanel usuario={user1} />}>
-            <Route path='panel' element={<PruebasBackend/>} />
+            <Route path='panel' element={<Panel urlBackend={URL} />} />
          </Route>
         </Routes>
       </BrowserRouter>

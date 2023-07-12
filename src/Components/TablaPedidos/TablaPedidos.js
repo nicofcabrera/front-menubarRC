@@ -12,14 +12,14 @@ const TablaPedidos = () => {
 
   useEffect(() => {
     getPedidos()
-  },[])
+  },[pedido])
 
 
   return (
     <table className="table">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            {/* <th scope="col">ID</th> */}
             <th scope="col">Usuario</th>
             <th scope="col">Fecha</th>
             <th scope="col">Menú</th>
@@ -28,7 +28,11 @@ const TablaPedidos = () => {
         </thead>
         <tbody>
         {
-          pedido.map(result => <FilaPedidos id={result._id} usuario1={result.usuario} fecha1={result.fecha} menu1={result.menu} estado1={result.estado} />)  
+          pedido.map(result =>
+            <tr className='fila_pedidos' key={result._id}>
+              <FilaPedidos id={result._id} usuario1={result.usuario} fecha1={result.fecha} menu1={result.menu} estado1={result.estado} />
+            </tr>
+          )  
         }
         </tbody>
     </table>

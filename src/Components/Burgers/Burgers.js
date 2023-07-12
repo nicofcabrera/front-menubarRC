@@ -43,7 +43,7 @@ const Burgers = ({title,allProducts, setAllProducts, total, setTotal, contador, 
       } */}
          {
           datos.map(product => (
-            <article className="card card_menu_front p-0  position-relative">
+            <article className="card card_menu_front p-0  position-relative" key={product._id}>
               <img src={product.img} className={"card-img-top"} alt={product.nombre} />
               <div className="card-body p-0">
                 <h5 className="card-title p-2">{product.nombre}</h5>
